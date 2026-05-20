@@ -5,6 +5,12 @@ class Libkrun < Formula
   sha256 "483f5579006d59212b9942b9ca39f03c6305940129d99925ecc979b1e6754711"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/slp/homebrew-krun/releases/download/libkrun-1.18.1"
+    sha256 cellar: :any, arm64_tahoe:   "ffc6cc9a2c2089b267aa4e7884574e0b992fedb8e4a72b63726883743697af3f"
+    sha256 cellar: :any, arm64_sequoia: "d3e4aa7707d90ecdbb58e0c1be1bf44082222ba974c14850053c7513a8bd85c5"
+  end
+
   depends_on "lld" => :build
   depends_on "rust" => :build
   # Upstream only supports Hypervisor.framework on arm64
